@@ -7,7 +7,7 @@ const ColorContrastChecker = require("color-contrast-checker");
 
 require("dotenv").config();
 
-const OWNER = "anuraghazra";
+const OWNER = "humble-barnacle001";
 const REPO = "github-readme-stats";
 const COMMENT_TITLE = "Automated Theme Preview";
 
