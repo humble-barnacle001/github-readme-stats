@@ -336,6 +336,18 @@ const themes = {
     text_color: "61ffca",
     bg_color: "15141b",
   },
+  apprentice: {
+    title_color: "ffffff",
+    icon_color: "ffffaf",
+    text_color: "bcbcbc",
+    bg_color: "262626",
+  },
+  moltack: {
+    title_color: "86092C",
+    icon_color: "86092C",
+    text_color: "574038",
+    bg_color: "F5E1C0",
+  },
 };
 
 module.exports = themes;
