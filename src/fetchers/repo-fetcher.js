@@ -94,10 +94,11 @@ const fetchRepo = async (username, reponame) => {
   if (isUser) {
     // if (!data.user.repository || data.user.repository.isPrivate) {
     if (!data.user.repository) {
-      if(data.user.repository.isPrivate)
-        console.warn("PAT ACCESS: VIEWING PRIVATE REPO")
       throw new Error("User Repository Not found");
     }
+    else
+      if(data.user.repository.isPrivate)
+        console.warn("PAT ACCESS: VIEWING PRIVATE REPO")
     return {
       ...data.user.repository,
       starCount: data.user.repository.stargazers.totalCount,
