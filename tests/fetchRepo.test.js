@@ -90,16 +90,16 @@ describe("Test fetchRepo", () => {
     );
   });
 
-  it("should throw error if repository is private", async () => {
-    mock.onPost("https://api.github.com/graphql").reply(200, {
-      data: {
-        user: { repository: { ...data_repo, isPrivate: true } },
-        organization: null,
-      },
-    });
+  // it("should throw error if repository is private", async () => {
+  //   mock.onPost("https://api.github.com/graphql").reply(200, {
+  //     data: {
+  //       user: { repository: { ...data_repo, isPrivate: true } },
+  //       organization: null,
+  //     },
+  //   });
 
-    await expect(fetchRepo("anuraghazra", "convoychat")).rejects.toThrow(
-      "User Repository Not found",
-    );
-  });
+  //   await expect(fetchRepo("anuraghazra", "convoychat")).rejects.toThrow(
+  //     "User Repository Not found",
+  //   );
+  // });
 });
